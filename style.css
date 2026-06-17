@@ -1,0 +1,204 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5;
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.2)), url('https://wallpaperaccess.com/full/539794.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+        color: #ffffff;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .quote-container {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .quote-box {
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .fade-text {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .fade-out {
+        opacity: 0;
+    }
+
+    .quote-text {
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 600;
+        color: #2c3e50;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+
+    .quote-author {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: 500;
+    }
+
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        position: relative;
+    }
+
+    button,
+    .tweet-link {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: background-color 0.2s, transform 0.1s;
+    }
+
+    button:active,
+    .tweet-link:active {
+        transform: scale(0.98);
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+    }
+
+    .btn-secondary {
+        background-color: #e0e0e0;
+        color: #333;
+    }
+
+    .btn-secondary:hover {
+        background-color: #d2d2d2;
+    }
+
+    .btn-fav.active {
+        background-color: #f1c40f;
+        color: #fff;
+    }
+
+    .toast {
+        position: absolute;
+        top: -45px;
+        background: #333;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        pointer-events: none;
+    }
+
+    .toast.show {
+        opacity: 1;
+    }
+
+    .favorites-container {
+        max-width: 700px;
+        width: 100%;
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .favorites-container h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: #2c3e50;
+        border-bottom: 2px solid #f0f2f5;
+        padding-bottom: 0.5rem;
+    }
+
+    .favorites-list {
+        list-style: none;
+    }
+
+    .fav-item {
+        padding: 0.75rem 0;
+        border-bottom: 1px dashed #e0e0e0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .fav-item:last-child {
+        border-bottom: none;
+    }
+
+    .fav-item-text {
+        font-style: italic;
+    }
+
+    .fav-item-author {
+        font-weight: 600;
+        color: #555;
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .quote-container {
+            padding: 1.5rem;
+        }
+
+        .quote-text {
+            font-size: 1.25rem;
+        }
+
+        .controls {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        button,
+        .tweet-link {
+            justify-content: center;
+            width: 100%;
+        }
+    }
